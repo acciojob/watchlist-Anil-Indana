@@ -69,12 +69,14 @@ public class MovieRepository {
         return movies;
     }
 
-    public HashMap<String, Director> getDirectorHashMap() {
-        return directorHashMap;
+    public Movie getMovieByName(String name){
+        if(movieHashMap.containsKey(name)) return movieHashMap.get(name);
+        return null;
     }
 
-    public HashMap<String, Movie> getMovieHashMap() {
-        return movieHashMap;
+    public Director getDirectorByName(String name){
+        if(directorHashMap.containsKey(name)) return directorHashMap.get(name);
+        return null;
     }
 }
 

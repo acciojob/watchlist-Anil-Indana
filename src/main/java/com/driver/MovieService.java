@@ -22,10 +22,10 @@ public class MovieService {
         return movieRepository.addMovieDirectorPair(movieName,directorName);
     }
     public Movie getMovieByName(String name){
-        return  movieRepository.getMovieHashMap().get(name);
+        return  movieRepository.getMovieByName(name);
     }
     public Director getDirectorByName(String name){
-        return movieRepository.getDirectorHashMap().get(name);
+        return movieRepository.getDirectorByName(name);
     }
     public List<String> getMoviesByDirectorName(String name){
         return movieRepository.getMoviesByDirectorName(name);
