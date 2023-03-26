@@ -59,7 +59,8 @@ public class MovieRepository {
         return "Deleted";
     }
     public List<String> getMoviesByDirectorName(String directorName){
-        return movieDirectorHashMap.get(directorName);
+        if(movieDirectorHashMap.containsKey(directorName)) return movieDirectorHashMap.get(directorName);
+        return null;
     }
     public List<String> findAllMovies(){
         List<String> movies = new ArrayList<>();
