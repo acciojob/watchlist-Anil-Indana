@@ -43,7 +43,7 @@ public class MovieRepository {
         List<String> movies = movieDirectorHashMap.get(directorName);
         movieDirectorHashMap.remove(directorName);
         for(String movieName : movies){
-            movieHashMap.remove(movieName);
+            if(movieHashMap.containsKey(movieName)) movieHashMap.remove(movieName);
         }
         return "Deleted by Director name";
     }
@@ -53,7 +53,7 @@ public class MovieRepository {
             List<String> movies = movieDirectorHashMap.get(directorName);
             movieDirectorHashMap.remove(directorName);
             for(String movieName : movies){
-                movieHashMap.remove(movieName);
+                if(movieHashMap.containsKey(movieName)) movieHashMap.remove(movieName);
             }
         }
         return "Deleted";
