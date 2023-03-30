@@ -34,7 +34,7 @@ public class MovieRepository {
         else{
             list = new ArrayList<>();
         }
-        list.add(movieName);
+        if(movieHashMap.containsKey(movieName)) list.add(movieHashMap.get(movieName).getName());
         movieDirectorHashMap.put(directorName,list);
         return "Movie and Director Paired";
     }
